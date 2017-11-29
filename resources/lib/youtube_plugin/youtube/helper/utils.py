@@ -198,7 +198,7 @@ def update_video_infos(provider, context, video_id_dict, playlist_item_id_dict=N
         video_item.live = True if snippet.get('liveBroadcastContent') == 'live' else False
 
         # set mediatype
-        video_item.set_mediatype('video')  # using video
+        video_item.set_mediatype('episode')  # using episode since all setContent is currently episode as well
 
         # duration
         if not video_item.live and use_play_data and play_data.get('total_time'):
